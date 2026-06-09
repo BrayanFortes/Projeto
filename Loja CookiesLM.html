@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -30,7 +30,7 @@ body{
   min-height:100vh;
 }
 
-/* ─── HEADER ─── */
+/* â”€â”€â”€ HEADER â”€â”€â”€ */
 header{
   background:rgba(255,254,254,.96);
   color:var(--brown);
@@ -111,12 +111,12 @@ nav{display:flex;gap:4px;}
   transition:background .15s,color .15s,border-color .15s;
 }
 .login-btn:hover,.login-btn.logged{background:var(--warm);border-color:var(--caramel);color:var(--brown);}
-/* ─── PAGES ─── */
+/* â”€â”€â”€ PAGES â”€â”€â”€ */
 .page{display:none;animation:fadeIn .3s ease;}
 .page.active{display:block;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-/* ─── HERO ─── */
+/* â”€â”€â”€ HERO â”€â”€â”€ */
 .hero{
   background:linear-gradient(135deg,#fffafe 0%,#ffddec 55%,#f28aaa 100%);
   padding:64px 40px;
@@ -186,7 +186,7 @@ nav{display:flex;gap:4px;}
   box-shadow:70px 8px 0 -2px #d83d6e,110px -4px 0 -3px #b61945;
 }
 
-/* ─── SECTION ─── */
+/* â”€â”€â”€ SECTION â”€â”€â”€ */
 .section{padding:40px 40px;}
 .section-head{
   display:flex;align-items:baseline;justify-content:space-between;
@@ -199,7 +199,7 @@ nav{display:flex;gap:4px;}
 }
 .section-sub{font-size:13px;color:var(--muted);}
 
-/* ─── CARDS ─── */
+/* â”€â”€â”€ CARDS â”€â”€â”€ */
 .cards-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(190px,220px));
@@ -262,7 +262,7 @@ nav{display:flex;gap:4px;}
 }
 .add-btn:hover{background:var(--brown);transform:translateY(-1px);}
 
-/* ─── BADGE ─── */
+/* â”€â”€â”€ BADGE â”€â”€â”€ */
 .badge{
   display:inline-block;
   padding:2px 8px;
@@ -274,7 +274,7 @@ nav{display:flex;gap:4px;}
 .badge-hit{background:#ffd6e2;color:#7b102b;border:1px solid #ef8ead;}
 .badge-veg{background:#fff0bd;color:#7b4f00;border:1px solid #f2cc64;}
 
-/* ─── CARRINHO ─── */
+/* â”€â”€â”€ CARRINHO â”€â”€â”€ */
 .cart-container{max-width:640px;margin:0 auto;padding:40px 40px;}
 .cart-title{
   font-family:'Playfair Display',serif;
@@ -356,7 +356,7 @@ nav{display:flex;gap:4px;}
 }
 .login-note strong{color:var(--caramel);}
 
-/* ─── CLIENTES ─── */
+/* â”€â”€â”€ CLIENTES â”€â”€â”€ */
 .clientes-container{padding:40px;}
 .two-col{display:grid;grid-template-columns:1fr 1.4fr;gap:28px;align-items:start;}
 .form-card{
@@ -451,7 +451,7 @@ td{padding:11px 16px;font-size:13px;}
   margin-right:8px;vertical-align:middle;
 }
 
-/* ─── PEDIDOS ─── */
+/* â”€â”€â”€ PEDIDOS â”€â”€â”€ */
 .pedidos-container{padding:40px;}
 .pedido-card{
   background:var(--white);
@@ -483,7 +483,7 @@ td{padding:11px 16px;font-size:13px;}
 .status-pend{background:#fef3c7;color:#92400e;}
 .status-cancel{background:#fee2e2;color:#991b1b;}
 
-/* ─── TOAST ─── */
+/* â”€â”€â”€ TOAST â”€â”€â”€ */
 /* LOGIN */
 .modal{
   position:fixed;inset:0;
@@ -526,6 +526,31 @@ td{padding:11px 16px;font-size:13px;}
   cursor:pointer;
 }
 .login-create:hover{text-decoration:underline;}
+.login-tabs{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-bottom:18px;
+}
+.login-tab{
+  background:var(--cream);
+  color:var(--muted);
+  border:1.5px solid var(--border);
+  border-radius:8px;
+  padding:9px 10px;
+  font-family:'DM Sans',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  transition:background .15s,color .15s,border-color .15s;
+}
+.login-tab.active{
+  background:var(--warm);
+  color:var(--brown);
+  border-color:var(--caramel);
+}
+.auth-form{display:none;}
+.auth-form.active{display:block;}
 .toast{
   position:fixed;bottom:28px;right:28px;
   background:var(--brown);color:#fff;
@@ -545,7 +570,7 @@ td{padding:11px 16px;font-size:13px;}
     <div class="logo-sub">ARTISANAL COOKIE BAKERY</div>
   </div>
   <nav>
-    <button class="nav-btn active" onclick="go('home',this)">Início</button>
+    <button class="nav-btn active" onclick="go('home',this)">InÃ­cio</button>
     <button class="nav-btn" data-staff-only hidden onclick="go('clientes',this)">Clientes</button>
     <button class="nav-btn" data-staff-only hidden onclick="go('pedidos',this)">Pedidos</button>
   </nav>
@@ -563,9 +588,9 @@ td{padding:11px 16px;font-size:13px;}
     <div class="hero-text">
       <h2>cookie's lm<br>cookies artesanais</h2>
       <p>Cookies recheados, fresquinhos e feitos com uma identidade doce em rosa, vinho e branco.</p>
-      <button class="hero-cta" onclick="document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">Ver cardápio</button>
+      <button class="hero-cta" onclick="document.getElementById('catalogo').scrollIntoView({behavior:'smooth'})">Ver cardÃ¡pio</button>
     </div>
-    <div class="hero-emoji">🍪</div>
+    <div class="hero-emoji">ðŸª</div>
   </div>
 
   <div class="section" id="catalogo">
@@ -608,7 +633,7 @@ td{padding:11px 16px;font-size:13px;}
         </div>
         <div class="form-group">
           <label>Cidade</label>
-          <input class="form-input" id="c-cidade" placeholder="Maringá">
+          <input class="form-input" id="c-cidade" placeholder="MaringÃ¡">
         </div>
         <button class="submit-btn" onclick="addCliente()">Cadastrar</button>
       </div>
@@ -622,8 +647,8 @@ td{padding:11px 16px;font-size:13px;}
             <tr><th>Nome</th><th>E-mail</th><th>Cidade</th></tr>
           </thead>
           <tbody id="clientes-tbody">
-            <tr><td><span class="avatar">AS</span><span class="td-name">Ana Souza</span></td><td>ana@email.com</td><td>São Paulo</td></tr>
-            <tr><td><span class="avatar">CL</span><span class="td-name">Carlos Lima</span></td><td>carlos@email.com</td><td>Maringá</td></tr>
+            <tr><td><span class="avatar">AS</span><span class="td-name">Ana Souza</span></td><td>ana@email.com</td><td>SÃ£o Paulo</td></tr>
+            <tr><td><span class="avatar">CL</span><span class="td-name">Carlos Lima</span></td><td>carlos@email.com</td><td>MaringÃ¡</td></tr>
             <tr><td><span class="avatar">MC</span><span class="td-name">Mariana Costa</span></td><td>mari@email.com</td><td>Curitiba</td></tr>
           </tbody>
         </table>
@@ -641,7 +666,7 @@ td{padding:11px 16px;font-size:13px;}
         <div class="pedido-id">#001</div>
         <div class="pedido-info">
           <div class="pedido-cliente">Ana Souza</div>
-          <div class="pedido-items">2× Cookie de Nutella · 1× Cookie de Ovomaltine</div>
+          <div class="pedido-items">2Ã— Cookie de Nutella Â· 1Ã— Cookie de Ovomaltine</div>
         </div>
         <div><span class="status status-ok">Entregue</span></div>
         <div class="pedido-total">R$ 43,00</div>
@@ -650,7 +675,7 @@ td{padding:11px 16px;font-size:13px;}
         <div class="pedido-id">#002</div>
         <div class="pedido-info">
           <div class="pedido-cliente">Carlos Lima</div>
-          <div class="pedido-items">3× Cookie de Ferro Rocher</div>
+          <div class="pedido-items">3Ã— Cookie de Ferro Rocher</div>
         </div>
         <div><span class="status status-pend">Pendente</span></div>
         <div class="pedido-total">R$ 39,00</div>
@@ -659,7 +684,7 @@ td{padding:11px 16px;font-size:13px;}
         <div class="pedido-id">#003</div>
         <div class="pedido-info">
           <div class="pedido-cliente">Mariana Costa</div>
-          <div class="pedido-items">1× Cookie Red Velvet · 2× Cookie de Kinder Bueno</div>
+          <div class="pedido-items">1Ã— Cookie Red Velvet Â· 2Ã— Cookie de Kinder Bueno</div>
         </div>
         <div><span class="status status-ok">Entregue</span></div>
         <div class="pedido-total">R$ 44,00</div>
@@ -667,8 +692,8 @@ td{padding:11px 16px;font-size:13px;}
       <div class="pedido-card">
         <div class="pedido-id">#004</div>
         <div class="pedido-info">
-          <div class="pedido-cliente">João Pereira</div>
-          <div class="pedido-items">4× Cookie de Amendoim</div>
+          <div class="pedido-cliente">JoÃ£o Pereira</div>
+          <div class="pedido-items">4Ã— Cookie de Amendoim</div>
         </div>
         <div><span class="status status-cancel">Cancelado</span></div>
         <div class="pedido-total">R$ 56,00</div>
@@ -680,23 +705,53 @@ td{padding:11px 16px;font-size:13px;}
 <div class="modal" id="login-modal" onclick="closeLogin(event)">
   <div class="login-card" onclick="event.stopPropagation()">
     <button class="close-btn" onclick="closeLogin()" title="Fechar">x</button>
-    <div class="form-card-title">Entrar na Conta</div>
-    <div class="form-group">
-      <label>E-mail</label>
-      <input class="form-input" id="login-email" type="email" placeholder="email@exemplo.com">
+    <div class="form-card-title" id="auth-title">Entrar na Conta</div>
+    <div class="login-tabs">
+      <button class="login-tab active" id="login-tab" onclick="setAuthMode('login')">Entrar</button>
+      <button class="login-tab" id="register-tab" onclick="setAuthMode('register')">Cadastrar</button>
     </div>
-    <div class="form-group">
-      <label>Senha</label>
-      <input class="form-input" id="login-senha" type="password" placeholder="Digite sua senha">
+
+    <div class="auth-form active" id="login-form">
+      <div class="form-group">
+        <label>E-mail</label>
+        <input class="form-input" id="login-email" type="email" placeholder="email@exemplo.com">
+      </div>
+      <div class="form-group">
+        <label>Senha</label>
+        <input class="form-input" id="login-senha" type="password" placeholder="Digite sua senha">
+      </div>
+      <button class="submit-btn" onclick="login()">Entrar</button>
+      <button class="login-create" onclick="setAuthMode('register')">Criar uma conta</button>
     </div>
-    <button class="submit-btn" onclick="login()">Entrar</button>
+
+    <div class="auth-form" id="register-form">
+      <div class="form-group">
+        <label>Nome completo</label>
+        <input class="form-input" id="register-nome" placeholder="Ex: Ana Souza">
+      </div>
+      <div class="form-group">
+        <label>E-mail</label>
+        <input class="form-input" id="register-email" type="email" placeholder="email@exemplo.com">
+      </div>
+      <div class="form-group">
+        <label>Senha</label>
+        <input class="form-input" id="register-senha" type="password" placeholder="Crie uma senha">
+      </div>
+      <div class="form-group">
+        <label>Confirmar senha</label>
+        <input class="form-input" id="register-confirma" type="password" placeholder="Digite a senha novamente">
+      </div>
+      <button class="submit-btn" onclick="registerCliente()">Cadastrar</button>
+      <button class="login-create" onclick="setAuthMode('login')">Ja tenho uma conta</button>
+    </div>
+
     <button class="login-create" onclick="closeLogin(); go('home', document.querySelector('.nav-btn'))">Continuar escolhendo cookies</button>
   </div>
 </div>
 <div class="toast" id="toast"></div>
 
 <script>
-// ─── PRODUTOS ───
+// â”€â”€â”€ PRODUTOS â”€â”€â”€
 const cookieIcons = {
 
   nutella: `<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" width="118" height="118">
@@ -802,7 +857,7 @@ const cookieIcons = {
   <!-- cream filling base -->
   <ellipse cx="70" cy="68" rx="32" ry="29" fill="url(#o_cream)"/>
   <ellipse cx="68" cy="66" rx="24" ry="21" fill="url(#o_cream2)" opacity="0.7"/>
-  <!-- Ovomaltine granules — large, textured, realistic -->
+  <!-- Ovomaltine granules â€” large, textured, realistic -->
   <circle cx="58" cy="58" r="6" fill="#3a1a06"/>
   <circle cx="58" cy="58" r="2.5" fill="#6b3814" opacity="0.7"/>
   <circle cx="72" cy="54" r="5.5" fill="#4a2208"/>
@@ -1006,7 +1061,7 @@ const cookieIcons = {
   <!-- cream filling -->
   <ellipse cx="70" cy="68" rx="32" ry="29" fill="url(#k_cream)"/>
   <ellipse cx="68" cy="66" rx="24" ry="21" fill="url(#k_cream2)" opacity="0.7"/>
-  <!-- KINDER signature milk choc stripes — thick and bold -->
+  <!-- KINDER signature milk choc stripes â€” thick and bold -->
   <path d="M40 56 Q70 47 100 56" stroke="#3e1800" stroke-width="5.5" fill="none" stroke-linecap="round"/>
   <path d="M40 56 Q70 47 100 56" stroke="#6b3200" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
   <path d="M39 66 Q70 57 101 66" stroke="#3e1800" stroke-width="5.5" fill="none" stroke-linecap="round"/>
@@ -1071,7 +1126,7 @@ const cookieIcons = {
   <!-- peanut butter filling -->
   <ellipse cx="70" cy="68" rx="32" ry="29" fill="url(#a_pb)"/>
   <ellipse cx="68" cy="66" rx="24" ry="21" fill="url(#a_pb2)" opacity="0.7"/>
-  <!-- PEANUTS — detailed, large, 3 visible -->
+  <!-- PEANUTS â€” detailed, large, 3 visible -->
   <!-- peanut 1: left-center -->
   <g transform="translate(58,60) rotate(-28)">
     <ellipse cx="0" cy="-7" rx="8" ry="5.5" fill="url(#a_pnut)"/>
@@ -1127,10 +1182,20 @@ const products = [
 let cart = [];
 let loggedUser = '';
 let loggedRole = '';
+let customerAccounts = {};
+try{
+  customerAccounts = JSON.parse(localStorage.getItem('cookieslmCustomers')) || {};
+}catch(e){
+  customerAccounts = {};
+}
 const staffAccounts = {
   'admin@cookieslm.com': {password:'admin123', role:'Administrador'},
   'vendedor@cookieslm.com': {password:'vendedor123', role:'Vendedor'},
 };
+
+function saveCustomerAccounts(){
+  localStorage.setItem('cookieslmCustomers', JSON.stringify(customerAccounts));
+}
 
 function renderProducts(){
   const g = document.getElementById('products-grid');
@@ -1155,7 +1220,7 @@ function addCart(id){
   if(item) item.qty++;
   else cart.push({...p, qty:1});
   updateCartCount();
-  toast('🍪 '+p.name+' adicionado!');
+  toast('ðŸª '+p.name+' adicionado!');
 }
 
 function updateCartCount(){
@@ -1165,7 +1230,7 @@ function updateCartCount(){
 function renderCart(){
   const el = document.getElementById('cart-content');
   if(!cart.length){
-    el.innerHTML=`<div class="cart-empty"><span>🛒</span>Seu carrinho está vazio.<br>Adicione cookies no catálogo!</div>`;
+    el.innerHTML=`<div class="cart-empty"><span>ðŸ›’</span>Seu carrinho estÃ¡ vazio.<br>Adicione cookies no catÃ¡logo!</div>`;
     return;
   }
   const total = cart.reduce((s,i)=>s+i.price*i.qty,0);
@@ -1177,16 +1242,16 @@ function renderCart(){
         <div class="cart-item-price">R$ ${i.price},00 cada</div>
       </div>
       <div class="qty-ctrl">
-        <button class="qty-btn" onclick="changeQty(${i.id},-1)">−</button>
+        <button class="qty-btn" onclick="changeQty(${i.id},-1)">âˆ’</button>
         <span class="qty-num">${i.qty}</span>
         <button class="qty-btn" onclick="changeQty(${i.id},1)">+</button>
       </div>
-      <button class="remove-btn" onclick="removeCart(${i.id})" title="Remover">✕</button>
+      <button class="remove-btn" onclick="removeCart(${i.id})" title="Remover">âœ•</button>
     </div>`).join('');
   el.innerHTML = items + `
     <div class="cart-summary">
       <div class="summary-row"><span>Subtotal</span><span>R$ ${total},00</span></div>
-      <div class="summary-row"><span>Frete</span><span style="color:var(--success)">Grátis</span></div>
+      <div class="summary-row"><span>Frete</span><span style="color:var(--success)">GrÃ¡tis</span></div>
       <div class="summary-row total"><span>Total</span><span>R$ ${total},00</span></div>
       <div class="login-note">
         ${loggedUser ? `Pedido vinculado a <strong>${loggedUser}</strong>.` : 'Entre na sua conta para finalizar o pedido.'}
@@ -1213,7 +1278,7 @@ function removeCart(id){
 function finalizarPedido(){
   if(!loggedUser){
     openLogin();
-    toast('Faça login para finalizar o pedido!');
+    toast('FaÃ§a login para finalizar o pedido!');
     return;
   }
   cart=[];
@@ -1240,7 +1305,7 @@ function renderLoginState(){
   if(!btn) return;
   if(loggedUser){
     const nome = loggedUser.split('@')[0];
-    btn.textContent = loggedRole === 'Cliente' ? 'Olá, ' + nome : loggedRole + ': ' + nome;
+    btn.textContent = loggedRole === 'Cliente' ? 'OlÃ¡, ' + nome : loggedRole + ': ' + nome;
     btn.classList.add('logged');
   }else{
     btn.textContent = 'Entrar';
@@ -1255,14 +1320,25 @@ function toggleLogin(){
     loggedRole = '';
     renderLoginState();
     renderCart();
-    toast('Você saiu da conta.');
+    toast('VocÃª saiu da conta.');
     return;
   }
   openLogin();
 }
 function openLogin(){
+  setAuthMode('login');
   document.getElementById('login-modal').classList.add('show');
   setTimeout(()=>document.getElementById('login-email').focus(),50);
+}
+
+function setAuthMode(mode){
+  const isRegister = mode === 'register';
+  document.getElementById('auth-title').textContent = isRegister ? 'Cadastrar Conta' : 'Entrar na Conta';
+  document.getElementById('login-form').classList.toggle('active', !isRegister);
+  document.getElementById('register-form').classList.toggle('active', isRegister);
+  document.getElementById('login-tab').classList.toggle('active', !isRegister);
+  document.getElementById('register-tab').classList.toggle('active', isRegister);
+  setTimeout(()=>document.getElementById(isRegister ? 'register-nome' : 'login-email').focus(),50);
 }
 
 function closeLogin(event){
@@ -1278,8 +1354,14 @@ function login(){
   if(staffAccounts[emailKey]){
     if(staffAccounts[emailKey].password !== senha){toast('Senha de vendedor/administrador incorreta!');return;}
     loggedRole = staffAccounts[emailKey].role;
-  }else{
+  }else if(customerAccounts[emailKey]){
+    if(customerAccounts[emailKey].password !== senha){toast('Senha de cliente incorreta!');return;}
     loggedRole = 'Cliente';
+  }else{
+    toast('Conta nao encontrada. Cadastre-se primeiro!');
+    setAuthMode('register');
+    document.getElementById('register-email').value = email;
+    return;
   }
   loggedUser = email;
   document.getElementById('login-senha').value = '';
@@ -1288,23 +1370,44 @@ function login(){
   renderCart();
   toast(loggedRole === 'Cliente' ? 'Login de cliente realizado!' : 'Login de ' + loggedRole + ' realizado!');
 }
-// ─── CLIENTES ───
+
+function registerCliente(){
+  const nome = document.getElementById('register-nome').value.trim();
+  const email = document.getElementById('register-email').value.trim();
+  const senha = document.getElementById('register-senha').value.trim();
+  const confirma = document.getElementById('register-confirma').value.trim();
+  const emailKey = email.toLowerCase();
+  if(!nome || !email || !senha || !confirma){toast('Preencha todos os campos do cadastro!');return;}
+  if(senha.length < 4){toast('A senha precisa ter pelo menos 4 caracteres!');return;}
+  if(senha !== confirma){toast('As senhas nao conferem!');return;}
+  if(staffAccounts[emailKey] || customerAccounts[emailKey]){toast('Este e-mail ja esta cadastrado!');return;}
+  customerAccounts[emailKey] = {name:nome, password:senha, role:'Cliente'};
+  saveCustomerAccounts();
+  loggedUser = email;
+  loggedRole = 'Cliente';
+  ['register-nome','register-email','register-senha','register-confirma','login-senha'].forEach(id=>document.getElementById(id).value='');
+  closeLogin();
+  renderLoginState();
+  renderCart();
+  toast('Cadastro realizado com sucesso!');
+}
+// â”€â”€â”€ CLIENTES â”€â”€â”€
 function addCliente(){
   if(!isStaff()){
     go('home', document.querySelector('.nav-btn'));
-    toast('Área disponível apenas para vendedor ou administrador.');
+    toast('Ãrea disponÃ­vel apenas para vendedor ou administrador.');
     return;
   }
   const nome = document.getElementById('c-nome').value.trim();
   const email = document.getElementById('c-email').value.trim();
   const cidade = document.getElementById('c-cidade').value.trim();
-  if(!nome||!email){toast('⚠️ Preencha nome e e-mail!');return;}
+  if(!nome||!email){toast('âš ï¸ Preencha nome e e-mail!');return;}
   const initials = nome.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase();
   const row = document.createElement('tr');
-  row.innerHTML=`<td><span class="avatar">${initials}</span><span class="td-name">${nome}</span></td><td>${email}</td><td>${cidade||'—'}</td>`;
+  row.innerHTML=`<td><span class="avatar">${initials}</span><span class="td-name">${nome}</span></td><td>${email}</td><td>${cidade||'â€”'}</td>`;
   document.getElementById('clientes-tbody').prepend(row);
   ['c-nome','c-email','c-tel','c-cidade'].forEach(id=>document.getElementById(id).value='');
-  toast('✅ Cliente cadastrado!');
+  toast('âœ… Cliente cadastrado!');
 }
 
 function filterClientes(v){
@@ -1313,12 +1416,12 @@ function filterClientes(v){
   });
 }
 
-// ─── NAVEGAÇÃO ───
+// â”€â”€â”€ NAVEGAÃ‡ÃƒO â”€â”€â”€
 function go(page, activeEl){
   if((page === 'clientes' || page === 'pedidos') && !isStaff()){
     page = 'home';
     activeEl = document.querySelector('.nav-btn');
-    toast('Faça login como vendedor ou administrador para acessar essa área.');
+    toast('FaÃ§a login como vendedor ou administrador para acessar essa Ã¡rea.');
   }
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+page).classList.add('active');
@@ -1326,7 +1429,7 @@ function go(page, activeEl){
   if(activeEl && activeEl.classList.contains('nav-btn')) activeEl.classList.add('active');
   if(page==='carrinho') renderCart();
 }
-// ─── TOAST ───
+// â”€â”€â”€ TOAST â”€â”€â”€
 function toast(msg){
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -1340,3 +1443,7 @@ renderLoginState();
 </script>
 </body>
 </html>
+
+
+
+
